@@ -15,8 +15,7 @@ export default function SignIn() {
     pass: "",
   }
   
-  const [getSingInInfo, setgetSingInInfo] = useState({});
-  const dispatch = useDispatch();
+
 
   const checkUser = async (formV) => {
     try {
@@ -56,7 +55,7 @@ export default function SignIn() {
     return (
       <section className="my_home">
          <div className='top'>
-         <Link to={'./'}>
+         <Link to={'/'}>
                 <img className="logo" src="https://pngimg.com/uploads/netflix/netflix_PNG25.png" alt="no img" />
                 </Link>
                         <div className="navSS">

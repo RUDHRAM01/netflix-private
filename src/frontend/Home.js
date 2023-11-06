@@ -2,9 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import email from "@emailjs/browser";
-
-
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { addSign } from "./signSlice";
 import img1 from "../image/tv.png";
 import img2 from "../image/download.jpg";
@@ -152,7 +149,7 @@ export default function Home() {
                         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", position: "relative" }}>
                             <div style={{ display: "flex", justifyContent: "space-between", paddingY: "24px", flexWrap: "wrap", alignItems: "center", width: "100%", zIndex: "9999" }}>
                                 <div></div>
-                                <Link to="./">
+                                <Link to="/">
                                     <img  src="https://pngimg.com/uploads/netflix/netflix_PNG25.png" alt="no img" className="landingHeadingLogo"/>
                                 </Link>
                                 <div></div>
@@ -162,7 +159,7 @@ export default function Home() {
                                         <option value="English">English</option>
                                         <option value="Hindi">Hindi</option>
                                     </select>
-                                    <Link to="./signIn"><button style={{ height: "40px", border: "none", borderRadius: "4px", width: "60px", backgroundColor: "red", color: "white",cursor:"pointer" }}>Sign In</button></Link>
+                                    <Link to="/signIn"><button style={{ height: "40px", border: "none", borderRadius: "4px", width: "60px", backgroundColor: "red", color: "white",cursor:"pointer" }}>Sign In</button></Link>
                                 </div>
                                 <div></div>
                             </div>
@@ -180,7 +177,7 @@ export default function Home() {
                                 </Typography>
                                 <form ref={form} onSubmit={sendEmail} style={{display:"flex",gap:"8px",marginTop:"8px",width:"100%",flexWrap:"wrap",justifyContent:"center"}}>
                                     <input type='email' placeholder="Email address" style={{height:"40px", width:"80%",maxWidth:"54vh",borderRadius:"4px"}}  required/>
-                                    <button style={{ border: "none", backgroundColor: "red", color: "white", fontWeight: "500", borderRadius: "4px", width: "24vh", display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "20px",cursor:"pointer" }} className="landingHeadingButton" type="submit">Get Started <ArrowForwardIosIcon /></button>
+                                    <button style={{ border: "none", backgroundColor: "red", color: "white", fontWeight: "500", borderRadius: "4px", width: "24vh", display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "20px",cursor:"pointer" }} className="landingHeadingButton" type="submit">Get Started </button>
                                     <input type="text" value={num} name="code" style={{display:"none"}} readOnly />
                                 </form>
                             </div>
@@ -272,7 +269,7 @@ export default function Home() {
                 ) : (
                     <div className="parent_signUp">
                         <div className="navigation_signUP">
-                            <Link to="./">
+                            <Link to="/">
                                 <img className="logo" src="https://pngimg.com/uploads/netflix/netflix_PNG25.png" alt="no img" />
                             </Link>
                             <hr />
