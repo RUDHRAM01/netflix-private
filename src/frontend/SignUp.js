@@ -1,10 +1,7 @@
-import React , { useRef } from "react";
+import React  from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { TextField } from "@mui/material";
 import { useState } from "react";
-import { addSign } from './signSlice';
-import { useDispatch } from "react-redux";
 
 
 import './SignUp.css';
@@ -19,8 +16,6 @@ export default function SignUp() {
     
 
 
-      const [getSingInInfo, setgetSingInInfo] = useState({});
-      const dispatch = useDispatch();
         
     
       const [formValues, setFormValues] = useState(defaultValue);
@@ -28,7 +23,7 @@ export default function SignUp() {
         console.log(e.target);
         
         const { name, value } = e.target;
-        console.log(name);
+        
         setFormValues({
           ...formValues,
           [name]: value,
@@ -37,11 +32,11 @@ export default function SignUp() {
     
     
     const handleSubmit = (event) => {
-        if (formValues.email == "" || formValues.email == " " || formValues.pass == "" || formValues.pass == " " || !formValues.email.includes("@")) {
+        if (formValues.email === "" || formValues.email === " " || formValues.pass === "" || formValues.pass === " " || !formValues.email.includes("@")) {
             alert("please enter valid data!");
             return;
           }
-        const { name, pass } = formValues;
+        
       };
     return (
       <>

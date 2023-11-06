@@ -1,8 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import email from "@emailjs/browser";
-import { addSign } from "./signSlice";
 import img1 from "../image/tv.png";
 import img2 from "../image/download.jpg";
 import img3 from "../image/create_profile.png";
@@ -24,7 +22,7 @@ export default function Home() {
     const [num, setNum] = useState(0);
     const [formValues, setFormValues] = useState({ user_email: "", get_code: "" });
     const form = useRef();
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const data = [
         {
             title: "What is Netflix?",
@@ -53,6 +51,9 @@ export default function Home() {
     ]
 
     useEffect(() => {
+        const randomClick = () => {
+            setNum(randomNumberInRange(1565, 5546));
+        };
         randomClick();
     }, []);
 
@@ -60,9 +61,6 @@ export default function Home() {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    const randomClick = () => {
-        setNum(randomNumberInRange(1565, 5546));
-    };
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -96,11 +94,11 @@ export default function Home() {
         }
     };
 
-    const handleSubmit = (event) => {
-        // const { name, pass } = formValues;
-        // checkUser(formValues);
-        dispatch(addSign(formValues));
-    };
+    // const handleSubmit = (event) => {
+    //     // const { name, pass } = formValues;
+    //     // checkUser(formValues);
+    //     dispatch(addSign(formValues));
+    // };
 
     return (
         <>

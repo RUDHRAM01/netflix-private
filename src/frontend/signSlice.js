@@ -70,7 +70,7 @@ export const putSign = (data) => async (dispatch) => {
 export const deleteSign = (id) => async (dispatch) => {
   dispatch(startLoading());
   try {
-    const res = await axios.delete(`http://localhost:3000/sign/${id}`);
+    await axios.delete(`http://localhost:3000/sign/${id}`);
   } catch (e) {
     dispatch(hasError(e.message));
   }

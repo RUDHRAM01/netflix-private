@@ -1,8 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { addSign } from './signSlice';
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
 import img5 from '../image/ba.jpg';
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -20,7 +17,7 @@ export default function SignIn() {
   const checkUser = async (formV) => {
     try {
       const result = await axios.get(`http://localhost:3000/signs`);
-      if (formV.pass == result.data[0].pass && formV.email == result.data[0].email) {
+      if (formV.pass === result.data[0].pass && formV.email === result.data[0].email) {
         alert("valid");
       } else {
         alert("invalid");
@@ -48,7 +45,7 @@ export default function SignIn() {
 
 
   const handleSubmit = (event) => {
-    const { name, pass } = formValues;
+    // const { name, pass } = formValues;
     checkUser(formValues);
     // dispatch(addSign(formValues));
   };
