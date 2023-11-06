@@ -1,0 +1,122 @@
+footer {
+  background-color: black;
+  border-top: 8px solid #222;
+  padding-top: 5%;
+  font-family: sans-serif;
+  color: gray;
+}
+
+footer h5 {
+ color: gray;
+  
+  padding-bottom: 1%;
+}
+
+footer .content {
+  margin: 0 10px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+footer .content .middle-box {
+  width: 20%;
+}
+
+footer .content a {
+  color: gray;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+footer .content a:hover {
+  text-decoration: underline;
+}
+
+footer .content select {
+  background-color: transparent;
+ color: gray;
+  padding: 8px;
+
+}
+
+footer .content select option {
+  background-color: black;
+}
+
+.footer2{
+  background-color: black;
+  padding: 15px 23px;
+ color: gray;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.footer2 span a{
+  color: crimson;
+  text-decoration: none;
+}
+.footer2 span a:hover{
+  text-decoration: underline;
+}
+
+.number{
+  margin: 0 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.number a{
+  text-decoration: none;
+  color: gray;
+}
+
+@media (max-width: 1000px) {
+  footer .content {
+    margin: 0 -30px;
+  }
+}
+
+@media (max-width: 900px) {
+  footer .content a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 730px) {
+  footer .content .middle-box {
+    width: 50%;
+  }
+  footer .content {
+    margin: 0 60px 0 100px;
+  }
+}
+
+@media (max-width: 530px) {
+  footer .content {
+    margin: 0 20px 0 60px;
+  }
+}
+
+@media (max-width: 530px) {
+  footer .content {
+    margin: 0 10px 0 40px;
+  }
+  footer .content,
+  .middle-box {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  footer .content {
+    margin: 0 10px 0 70px;
+  }
+  footer .content .middle-box {
+    width: 100%;
+    padding-right: 20px;
+    margin-top: 15%;
+  }
+}
