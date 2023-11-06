@@ -6,7 +6,6 @@ import './App.css';
 import Home from './frontend/Home';
 import SignIn from './frontend/SignIn';
 import SignUp from './frontend/SignUp';
-import Landing from './frontend/Lamding/Landing';
 import './index.css'
 export default function App() {
 
@@ -17,7 +16,7 @@ export default function App() {
           <Route exact path='/' component={Home} />
           <Route exact path='/signIn' component={SignIn} />
           <Route exact path='/SignUp' component={SignUp} />
-          <Route exact path='/landing' component={Landing} />
+          
         </div>
    
     </>
