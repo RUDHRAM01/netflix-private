@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
 import email from "@emailjs/browser";
 import img1 from "../image/tv.png";
 import img2 from "../image/download.jpg";
@@ -147,9 +146,9 @@ export default function Home() {
                         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", position: "relative" }}>
                             <div style={{ display: "flex", justifyContent: "space-between", paddingY: "24px", flexWrap: "wrap", alignItems: "center", width: "100%", zIndex: "9999" }}>
                                 <div></div>
-                                <Link to="/">
+                                <a href="/">
                                     <img  src="https://pngimg.com/uploads/netflix/netflix_PNG25.png" alt="no img" className="landingHeadingLogo"/>
-                                </Link>
+                                </a>
                                 <div></div>
                                 <div></div>
                                 <div style={{ display: "flex", gap: "8px", }}>
@@ -157,7 +156,7 @@ export default function Home() {
                                         <option value="English">English</option>
                                         <option value="Hindi">Hindi</option>
                                     </select>
-                                    <Link to="/signIn"><button style={{ height: "40px", border: "none", borderRadius: "4px", width: "60px", backgroundColor: "red", color: "white",cursor:"pointer" }}>Sign In</button></Link>
+                                    <a href="/signIn"><button style={{ height: "40px", border: "none", borderRadius: "4px", width: "60px", backgroundColor: "red", color: "white",cursor:"pointer" }}>Sign In</button></a>
                                 </div>
                                 <div></div>
                             </div>
@@ -267,9 +266,9 @@ export default function Home() {
                 ) : (
                     <div className="parent_signUp">
                         <div className="navigation_signUP">
-                            <Link to="/">
+                            <a href="/">
                                 <img className="logo" src="https://pngimg.com/uploads/netflix/netflix_PNG25.png" alt="no img" />
-                            </Link>
+                            </a>
                             <hr />
                             <div className="main_SignUp">
                                 <div className="my_code_div">
