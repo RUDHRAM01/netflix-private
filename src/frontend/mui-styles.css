@@ -394,7 +394,7 @@ body{
   
   @media screen and (max-width: 550px){
     .landingHeading{
-      font-size: 30px;
+      font-size: 30px !important;
     }
     .heading1 h1{
       font-size: 2rem;

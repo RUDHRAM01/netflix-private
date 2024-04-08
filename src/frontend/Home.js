@@ -9,12 +9,11 @@ import vid1 from "../video/vid1.mp4";
 import vid2 from "../video/vid2.m4v";
 import Dow from "../video/download-icon.gif";
 import img6 from "../image/boxshot.png";
-import "./mui-styles.css";
 import Details from "./Details";
 import Ready from "./Ready";
 import Bottom from "./Bottom";
 import Typography from '@mui/material/Typography'
-
+import './mui-styles.css'
 
 export default function Home() {
     const [switchPage, setSwitchPage] = useState(true);
